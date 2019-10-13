@@ -1,0 +1,69 @@
+<main class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="card border-0 rounded-0">
+    
+                <div class="card-body">
+    
+                    <h2>Listado de Transacciones</h2>
+    
+                    <!-- Filtro -->
+                    <div>
+                        <div class="card card-body">
+                            <form [formGroup]="filterUserForm">
+                                <div class="form-row">
+                                    <div class="form-group col-md-3">
+                                        <label for="desde">Fecha desde</label>
+                                        <mat-form-field>
+                                            <input matInput [matDatepicker]="picker1" placeholder="Selecciona la fecha"
+                                                formControlName="desde">
+                                            <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                            <mat-datepicker #picker1></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                    <div class="form-group col-md-3" style="padding-left: 32px;">
+                                        <label for="hasta">Fecha hasta</label>
+                                        <mat-form-field>
+                                            <input matInput [matDatepicker]="picker2" placeholder="Selecciona la fecha"
+                                                formControlName="hasta">
+                                            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                                            <mat-datepicker #picker2></mat-datepicker>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="form-row botones ">
+                                    <div class="col-md-9 col-md-offset-4">
+                                        <button type="button" class="btn btn_gris btn-sm boton"
+                                                (click)="limpiar()">
+                                            <i class="far fa-trash-alt icon-btn"></i> Limpiar Filtros
+                                        </button>
+                                        <button type="button" class="btn btn_azul btn-sm boton"
+                                                (click)="buscar()"><i class="fas fa-search icon-btn">
+                                        </i> Buscar
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+    
+                    <div>
+                        <ng2-slim-loading-bar [color]="'blue'"></ng2-slim-loading-bar>
+                        <div class="table-responsive">
+                            <ng2-smart-table [settings]="settings" 
+                                [source]="source" (custom)="onCustomAction($event)">
+                            </ng2-smart-table>
+                        </div>
+                      <div class="d-flex justify-content-end">
+                        <div class="p-2 bd-highlight pager">&nbsp;{{total}} Registros - Mostrando {{paginator.desde}} de {{paginator.hasta}} páginas </div>
+                        <i class="fa fa-angle-left action p-2 bd-highlight pager" aria-hidden="true"  (click)="pagination(-1)"></i>&nbsp;&nbsp;
+                        <i class="fa fa-angle-right action p-2 bd-highlight pager" aria-hidden="true"  (click)="pagination(1)"></i>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</main>
+    

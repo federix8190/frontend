@@ -1,0 +1,7 @@
+<div *blockUI="'ui'">
+    <div class="page-wrapper" [ngClass]="{'toggled' : getSideBarState()}" id="mydiv" >
+        <app-sidebar *lg></app-sidebar>
+        <router-outlet></router-outlet> 
+        <div class="overlay" (click)="toggleSidebar()" [ngClass]="{'show' : !getSideBarState()}"></div>
+    </div>
+</div>

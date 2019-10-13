@@ -1,0 +1,33 @@
+@media (max-width: 991px){
+    .sidebar {
+        display: none;
+    }
+}
+.burger-boton{
+    padding: 7px 17px !important;
+    border: none !important;
+    font-size: 20px !important;
+    color: white !important;
+    background: transparent !important;
+    outline: none !important;
+}
+.logo{
+    height:80px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.usuario-logueado p {
+    color: white;
+    padding: 0px 30px;
+}
+.usuario-logueado p i{
+   font-size: 12px !important;
+}
+.btn-signout{
+    background-color: transparent;
+    border: none;
+    color: white !important;
+    margin: 27px 20px !important;
+    outline: none !important;
+}
