@@ -10,7 +10,6 @@ import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ResponsiveModule } from 'ngx-responsive';
 import {NgxMaskModule} from 'ngx-mask';
-import { CookieService } from 'ngx-cookie-service';
 import {BlockUIModule, BlockUIService} from 'ng-block-ui';
 import { ToastrModule } from 'ngx-toastr';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
@@ -18,11 +17,12 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import {BlockuiHttpInterceptor} from './commons/blockui-http.interceptor';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 
+import {LoginComponent} from './components/login.component';
 import {ConfirmDialogComponent} from './components/confirm-dialog.component';
 import {ConfirmDialogService} from './services/confirm-dialog.service';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
+import {AppRoutingModule } from './app-routing.module';
+import {AppComponent } from './app.component';
+import {SidebarComponent } from './components/sidebar/sidebar.component';
 import {DeudasList} from './components/deudas-list';
 import {ResumenServiciosList} from './components/resumen-servicios-list';
 import {TransaccionesList} from './components/transaccion-list';
@@ -87,6 +87,7 @@ registerLocaleData(localePy);
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
     SidebarComponent,
     TransaccionesList,
     ResumenServiciosList,
@@ -154,7 +155,6 @@ registerLocaleData(localePy);
         useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG,
     },
     DatePipe,
-    CookieService,
     BlockUIService,
     {
         provide: HTTP_INTERCEPTORS,

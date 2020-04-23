@@ -1,4 +1,4 @@
 export const environment = {
     production: false,
-    URL_BASE: "RestServices/api/"
+    URL_BASE: "/Backend/api/"
 };

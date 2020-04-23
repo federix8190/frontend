@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
     name: string;
     menu: Array<any> = [];
     breadcrumbList: Array<any> = [];
-    title = 'Pronet';
+    title = 'FederixApp';
     mostrarMenu: boolean = false;
     showMenuConvocatoria: boolean = false;
     showMenuConfiguracion: boolean = false;

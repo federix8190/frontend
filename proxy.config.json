@@ -1,8 +1,8 @@
 {
-  "/RestServices/api/": {
-    "target": "http://localhost:8080",
-    "secure": true,
-    "changeOrigin": true,
-    "logLevel": "debug"
-  }
+  	"/Backend/api/": {
+    	"target": "http://localhost:8282",
+    	"secure": true,
+    	"changeOrigin": true,
+    	"logLevel": "debug"
+  	}
 }

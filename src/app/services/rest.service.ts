@@ -22,6 +22,15 @@ export class RestService {
     constructor(private http: HttpClient) {
     }
 
+    login(username: string, password: string, rememberMe: boolean): Observable<any> {
+
+        let data = {
+            "username": username,
+            "password": password
+        };
+        return this.http.post(environment.URL_BASE + "sesion", JSON.stringify(data)  );
+    }
+
     listarTransacciones(filtros: any): Observable<any> {
         return this.http.get(this.urlTransacciones, {params: filtros}).map(r => r);
     }

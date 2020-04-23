@@ -1,0 +1,75 @@
+<div *xs>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 logo-login">
+                <img src="assets/images/logo.png" alt="">
+            </div>
+            <div class="col-lg-6 col-md-6 ml-auto mr-auto container-login">
+                <div class="card card-login">
+                    <form class="form" method="" action="" [formGroup]="loginForm">
+                        <div class="card-header card-header-info rounded-circle text-center ">
+                          <mat-icon class="icon-login" matSuffix>person</mat-icon>
+                        </div>
+                        <div class="card-body">
+                          <p class="text-login">Ingrese sus datos</p>
+                          <mat-form-field appearance="outline">
+                            <mat-label>Usuario o Email</mat-label>
+                            <input matInput placeholder="" formControlName="username">
+                            <mat-icon matSuffix class="input-icon">person</mat-icon>
+                          </mat-form-field>
+                          <mat-form-field appearance="outline">
+                            <mat-label>Contraseña</mat-label>
+                            <input type="password" matInput placeholder="" formControlName="password" (keyup.enter)="login()">
+                            <mat-icon matSuffix class="input-icon">vpn_key</mat-icon>
+                          </mat-form-field>
+                          <button type="button" class="btn btn-primary btn-ingresar"  (click)="login()">INGRESAR</button>
+                        </div>
+                        <div class="footer text-center"> 
+                          <p class=""> ¿Olvidó su 
+                            <a (click)="resetPassword()" class="forgot-pass">contraseña</a>?</p>
+                          <p class="version-no"> V {{version}}</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *lg class="section section-signup page-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 logo-login">
+          <img src="assets/images/logo.png" alt="">
+      </div>
+      <div class="col-lg-6 col-md-6 ml-auto mr-auto container-login">
+        <div class="card card-login">
+          <form class="form" method="" action="" [formGroup]="loginForm">
+            <div class="card-header card-header-info rounded-circle text-center ">
+              <mat-icon class="icon-login" matSuffix>person</mat-icon>
+            </div>
+            <div class="card-body">
+              <p class="text-login">Ingrese sus datos</p>
+              <mat-form-field appearance="outline">
+                <mat-label>Usuario o Email</mat-label>
+                <input matInput placeholder="" formControlName="username">
+                <mat-icon matSuffix class="input-icon">person</mat-icon>
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Contraseña</mat-label>
+                <input type="password" matInput placeholder="" formControlName="password" (keyup.enter)="login()">
+                <mat-icon matSuffix class="input-icon">vpn_key</mat-icon>
+              </mat-form-field>
+              <button type="button" class="btn btn-primary btn-ingresar"  (click)="login()">INGRESAR</button>
+            </div>
+            <div class="footer text-center"> 
+              <p class=""> ¿Olvidó su 
+                <a (click)="resetPassword()" class="forgot-pass">contraseña</a>?</p>
+              <p class="version-no"> V {{version}}</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
