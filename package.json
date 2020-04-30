@@ -30,7 +30,7 @@
     "core-js": "^2.5.4",
     "echarts": "^4.2.1",
     "flatpickr": "^4.5.7",
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "keycloak-js": "^6.0.1",
     "ng-block-ui": "^2.1.7",
     "ng2-completer": "^2.0.8",
